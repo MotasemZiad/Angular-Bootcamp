@@ -9,7 +9,9 @@ const user = {
         "mobile": "970599838964",
     },
     "graduated": false,
+    "gpa": 85.82,
     "alive": true,
+
 }
 
 console.log(user)
