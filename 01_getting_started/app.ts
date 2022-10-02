@@ -12,7 +12,6 @@ const user = {
     "graduated": false,
     "gpa": 85.82,
     "alive": true,
-
 }
 
 console.log(user)
