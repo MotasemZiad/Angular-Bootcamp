@@ -1,4 +1,5 @@
 console.log("Hello, TypeScript!")
+console.log("Hello, Angular!")
 
 const user = {
     "username": "motasemabunema",
