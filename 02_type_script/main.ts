@@ -75,13 +75,21 @@
 class Point {
     x: number
     y: number
+    
 
-    draw(){
-        //..
+
+    constructor(x?: number, y?: number){
+        this.x = x! 
+        this.y = y!
     }
 
-    getDistance(another: Point){
-        // .. 
+    draw(){
+        console.log("(X: ", this.x, ", Y: ", this.y, ")");
     }
 }
 
+// let point: Point
+// point = new Point()
+let point = new Point(7, 8)
+let point2 = new Point()
+console.log(point);
