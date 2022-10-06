@@ -35,5 +35,14 @@ enum Color {Red, Green, Blue};
 
 console.log(Color.Red, Color.Green, Color.Blue);
 
+let message = 'abc';
+let characters = message.split('');
+console.log(characters);
 
+// Type Assertion
+let msg;
+msg = 'abcd';
+let endsWith = (<string>msg).endsWith('d');
+let alternativeWay = (msg as string).endsWith('c');
+console.log(endsWith, alternativeWay);
 
