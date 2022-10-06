@@ -53,5 +53,19 @@ let log = function(message: any){
 
 let doLog = (message: any)=> console.log(message);
 
+// Interfaces
+let drawPoint = (point: Point) => {
+    // Your code logic
+    console.log(point);
+}
 
+drawPoint({
+    x: 2, 
+    y: 3
+});
+
+interface Point{
+    x: number
+    y: number
+}
 
