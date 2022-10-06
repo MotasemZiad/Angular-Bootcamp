@@ -46,3 +46,12 @@ let endsWith = (<string>msg).endsWith('d');
 let alternativeWay = (msg as string).endsWith('c');
 console.log(endsWith, alternativeWay);
 
+// Arrow Function
+let log = function(message: any){
+    console.log(message);
+}
+
+let doLog = (message: any)=> console.log(message);
+
+
+
