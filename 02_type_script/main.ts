@@ -1,4 +1,4 @@
-import { Point } from './point';
+// import { Point } from './point';
 
 // function log(message){
 //     console.log(message);
@@ -76,13 +76,40 @@ import { Point } from './point';
 // Classes
 // let point: Point
 // point = new Point()
-let point = new Point(7, 8)
-let point2 = new Point()
+// let point = new Point(7, 8)
+// let point2 = new Point()
 
-// point.draw()
-point2.x = 14
-point2.y = 16
-console.log(point2.x); 
-console.log(point2.y);
-console.log(point)
+// // point.draw()
+// point2.x = 14
+// point2.y = 16
+// console.log(point2.x); 
+// console.log(point2.y);
+// console.log(point)
+
+
+// Exercise:
+import {Like} from './like';
+import { LikeComponent } from './like.component'
+
+// let like = new Like(25)
+
+// like.addLike()
+// like.addLike()
+// like.addLike()
+// like.addLike()
+// like.addLike()
+// like.addLike()
+// like.removeLike()
+// like.removeLike()
+// like.switchLike()
+
+// console.log(like);
+
+let like = new LikeComponent(30, true)
+let like2 = new LikeComponent(30)
+like.onClick()
+like2.onClick()
+
+console.log(`Number of Likes: ${like.likesCount}, Is Selected: ${like.isSelected}`);
+console.log(`Number of Likes: ${like2.likesCount}, Is Selected: ${like2.isSelected}`);
 
