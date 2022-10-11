@@ -11,12 +11,18 @@ import { CoursesService } from './courses.service';
       </li>
     </ul>
     <img [src]="imageUrl" />
+    <table>
+      <tr>
+        <td [attr.colspan]="colSpan">Something really useful</td>
+      </tr>
+    </table>
   `,
 })
 export class CoursesComponent {
   title = "List of Courses"
   courses: string[]
   imageUrl = "https://www.copahost.com/blog/wp-content/uploads/2019/07/imgsize2.png"
+  colSpan = 2;
 
   constructor(service: CoursesService){
       this.courses = service.getCourses()
