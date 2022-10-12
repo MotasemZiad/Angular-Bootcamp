@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
     {{ "Title: " + (course.title | uppercase | lowercase) }} <br/>
     {{ "Students: " + (course.students | number) }} <br/>
     {{ "Rating: " + (course.rating | number: '1.1-2') }} <br/>
-    {{ "Price: " + (course.price | currency: 'GBP') }} <br/>
+    {{ "Price: " + (course.price | currency: 'EUR') }} <br/>
     {{ "Release Date: " + (course.releaseDate | date: 'shortDate')  }} <br/>
   `,
 })
