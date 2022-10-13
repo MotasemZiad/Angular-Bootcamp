@@ -15,7 +15,12 @@ export class FavoriteComponent implements OnInit {
 
   toggleFavorite(){
     this.isFavorite = !this.isFavorite
-    this.change.emit();
+    this.change.emit({ newValue: this.isFavorite });
   }
 
+}
+
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean
 }
