@@ -13,6 +13,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { TitlePipe } from './title.pipe';
 import { TitleComponent } from './title/title.component';
 import { SampleComponent } from './sample/sample.component';
+import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SampleComponent } from './sample/sample.component';
     FavoriteComponent,
     TitlePipe,
     TitleComponent,
-    SampleComponent
+    SampleComponent,
+    BootstrapPanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

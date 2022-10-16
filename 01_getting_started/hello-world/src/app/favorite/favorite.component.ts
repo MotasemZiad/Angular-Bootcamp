@@ -3,8 +3,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent {
   @Input('isFavorite') isFavorite = false;
