@@ -7,6 +7,6 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    // courses = ["Physics", "Mathematics", "Calculus", "Computer Science", "Programming", "Cloud Computing"]
-    courses = []
+    courses = ["Physics", "Mathematics", "Calculus", "Computer Science", "Programming", "Cloud Computing"]
+    // courses = []
 }
