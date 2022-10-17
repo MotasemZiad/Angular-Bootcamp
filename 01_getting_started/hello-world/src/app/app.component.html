@@ -1,9 +1,14 @@
 <h1>Angular Directives</h1>
 
-<div *ngIf="courses.length > 0">
-  List of courses
+<div *ngIf="courses.length > 0; then coursesList else noCourses">
 </div>
 
-<div *ngIf="courses.length == 0">
+<ng-template #coursesList>
+  <ul *ngFor="let course of courses">
+    <li>{{ course }}</li>
+  </ul>
+</ng-template>
+
+<ng-template #noCourses>
   No courses yet
-</div>
+</ng-template>
