@@ -1,5 +1,9 @@
-<h1>Angular</h1>
-<app-like
-   [numberOfLikes]="tweet.likesCount"
-   [isSelected]="tweet.isLiked"
-></app-like>
+<h1>Angular Directives</h1>
+
+<div *ngIf="courses.length > 0">
+  List of courses
+</div>
+
+<div *ngIf="courses.length == 0">
+  No courses yet
+</div>
