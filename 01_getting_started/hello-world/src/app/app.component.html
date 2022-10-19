@@ -1,8 +1,10 @@
 <h1>Angular Directives</h1>
-
+<button class="btn btn-success" (click)="onAdd()">Add</button>
 <ul *ngFor="let course of courses; index as i; last as isLast; first as isFirst; odd as isOdd; even as isEven">
   <li>
    Index: {{ i }}, first: {{ isFirst }}, last: {{ isLast }}, odd: {{ isOdd }}, even: {{ isEven }} => {{ course.name }}
    <span *ngIf="isOdd">(Odd)</span>
+   <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
+   <button class="btn btn-warning" (click)="onChange(course)">Change</button>
   </li>
 </ul>
