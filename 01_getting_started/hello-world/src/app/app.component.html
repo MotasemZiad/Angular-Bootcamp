@@ -1,11 +1,2 @@
 <h1>Angular Directives</h1>
-<button
-  [ngStyle]="{
-    'backgroundColor': canSave ? 'blue' : 'grey',
-    'color': canSave ? 'white' : 'black',
-    'fontWeight': canSave ? 'bold' : 'normal'
-  }"
-  (click)="toggleSave()"
->
-Save
-</button>
+<span>{{ task.assignee.name }}</span>
