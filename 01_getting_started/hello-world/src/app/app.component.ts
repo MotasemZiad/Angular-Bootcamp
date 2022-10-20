@@ -6,13 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    courses = [
-      {'id': 1, 'name': 'Programming'},
-      {'id': 2, 'name': 'Cloud Computing'},
-      {'id': 3, 'name': 'Networking'},
-      {'id': 4, 'name': 'Operating Systems'},
-      {'id': 5, 'name': 'Database Administration'},
-    ]
+    courses: any;
+
+    loadCourses(){
+      this.courses  = [
+        {'id': 1, 'name': 'Programming'},
+        {'id': 2, 'name': 'Cloud Computing'},
+        {'id': 3, 'name': 'Networking'},
+        {'id': 4, 'name': 'Operating Systems'},
+        {'id': 5, 'name': 'Database Administration'},
+      ]
+    }
+
+    trackCourse(index: number, course: Course){
+      return course ? course.id : undefined
+    }
 
     onAddSomething(course: Course){
       this.courses.push(course)
@@ -30,6 +38,7 @@ export class AppComponent {
     onChange(course: Course){
       course.name = 'UPDATED'
     }
+
 }
 
 interface Course {
