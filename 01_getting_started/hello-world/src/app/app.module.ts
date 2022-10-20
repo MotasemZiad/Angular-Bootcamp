@@ -15,6 +15,7 @@ import { TitleComponent } from './title/title.component';
 import { SampleComponent } from './sample/sample.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LikeComponent } from './like/like.component';
     TitleComponent,
     SampleComponent,
     BootstrapPanelComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
