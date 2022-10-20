@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    canSave = true
     courses: any;
+
+    toggleSave(){
+      this.canSave = !this.canSave
+    }
 
     loadCourses(){
       this.courses  = [
