@@ -16,6 +16,7 @@ import { SampleComponent } from './sample/sample.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InputFormatDirective } from './input-format.directive';
     SampleComponent,
     BootstrapPanelComponent,
     LikeComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
