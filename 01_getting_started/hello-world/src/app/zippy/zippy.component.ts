@@ -13,5 +13,4 @@ export class ZippyComponent {
     this.isExpanded = !this.isExpanded
   }
 
-
 }
