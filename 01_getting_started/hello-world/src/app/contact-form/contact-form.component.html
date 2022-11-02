@@ -1,44 +1,50 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input
-      required
-      minlength="5"
-      maxlength="20"
-      pattern="banana"
-      ngModel name="firstName"
-      #firstName="ngModel"
-      (change)="log(firstName)"
-      id="firstName"
-      type="text"
-      class="form-control">
-    <div
-      class="alert alert-danger"
-      *ngIf="firstName.touched && !firstName.valid" >
-        <div *ngIf="firstName.errors!['required']">
-          First name is required!
-        </div>
-        <div *ngIf="firstName.errors!['minlength']">
-          First name should be minimum of {{ firstName.errors!['minlength'].requiredLength }} characters.
-        </div>
-        <div *ngIf="firstName.errors!['maxlength']">
-          First name should be maximum of 10 characters.
-        </div>
-        <div *ngIf="firstName.errors!['pattern']">
-          First name should be of "banana" pattern.
-        </div>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label for="comment">Comment</label>
-    <textarea
-      ngModel name="comment"
-      id="comment"
-      rows="10"
-      cols="30"
-      class="form-control">
-    </textarea>
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="contact.touched && !contact.valid">
+      <div class="alert alert-danger">Invalid data!</div>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+        required
+        minlength="5"
+        maxlength="20"
+        pattern="banana"
+        ngModel name="firstName"
+        #firstName="ngModel"
+        (change)="log(firstName)"
+        id="firstName"
+        type="text"
+        class="form-control">
+      <div
+        class="alert alert-danger"
+        *ngIf="firstName.touched && !firstName.valid" >
+          <div *ngIf="firstName.errors!['required']">
+            First name is required!
+          </div>
+          <div *ngIf="firstName.errors!['minlength']">
+            First name should be minimum of {{ firstName.errors!['minlength'].requiredLength }} characters.
+          </div>
+          <div *ngIf="firstName.errors!['maxlength']">
+            First name should be maximum of 10 characters.
+          </div>
+          <div *ngIf="firstName.errors!['pattern']">
+            First name should be of "banana" pattern.
+          </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea
+        ngModel name="comment"
+        id="comment"
+        rows="10"
+        cols="30"
+        class="form-control">
+      </textarea>
+    </div>
   </div>
   <br>
 
