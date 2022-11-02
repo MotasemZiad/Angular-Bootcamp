@@ -60,6 +60,15 @@
         </option>
       </select>
     </div>
+
+    <label>Gender</label>
+    <div *ngFor="let g of gender" class="radio">
+      <label>
+        <input ngModel  type="radio" name="gender" [value]="g">
+        {{ g }}
+      </label>
+    </div>
+
     <br>
     <p>
       {{ f.value | json }}

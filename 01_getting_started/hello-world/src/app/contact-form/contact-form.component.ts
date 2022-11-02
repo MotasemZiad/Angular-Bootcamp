@@ -10,6 +10,11 @@ export class ContactFormComponent implements OnInit {
     {id: 1, name: 'Email'},
     {id: 2, name: 'Phone'},
   ];
+
+  gender = [
+    Gender.Male,
+    Gender.Female
+  ]
   constructor() { }
 
   ngOnInit(): void {
@@ -23,4 +28,9 @@ export class ContactFormComponent implements OnInit {
     console.log(f.value)
   }
 
+}
+
+export enum Gender {
+  Male = 'Male',
+  Female = "Female",
 }
