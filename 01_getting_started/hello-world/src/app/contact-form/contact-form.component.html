@@ -19,7 +19,7 @@
         class="form-control">
       <div
         class="alert alert-danger"
-        *ngIf="firstName.touched && !firstName.valid" >
+        *ngIf="firstName.touched && !firstName.valid">
           <div *ngIf="firstName.errors!['required']">
             First name is required!
           </div>
@@ -68,7 +68,6 @@
         {{ g }}
       </label>
     </div>
-
     <br>
     <p>
       {{ f.value | json }}
