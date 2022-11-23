@@ -8,6 +8,11 @@ import { FormArray, FormGroup, FormControl, AbstractControl } from '@angular/for
 })
 export class NewCourseFormComponent {
   form = new FormGroup({
+    name: new FormControl(),
+    contacts: new FormGroup({
+      email: new FormControl(),
+      phone: new FormControl()
+    }),
     topics: new FormArray([
 
     ])
