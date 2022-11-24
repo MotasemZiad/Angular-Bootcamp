@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsComponent {
   posts: any[] = [];
-  constructor(private http: HttpClient) {
+  constructor(http: HttpClient) {
     http.get('https://jsonplaceholder.typicode.com/posts')
       .subscribe(response => {
         this.posts = response as any
