@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { identifierName } from '@angular/compiler';
 
 @Component({
   selector: 'posts',
