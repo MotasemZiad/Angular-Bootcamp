@@ -24,7 +24,7 @@ export class PostsComponent {
 
     this.httpClient.post(this.URL, JSON.stringify(post)).subscribe({
       next: (response) => {
-        console.log(response);
+        this.posts.push(response)
       },
       error: (error) => {
         console.log(error);
