@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { identifierName } from '@angular/compiler';
 
 @Component({
   selector: 'posts',
@@ -8,11 +9,27 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsComponent {
   posts: any[] = [];
-  constructor(http: HttpClient) {
-    http.get('https://jsonplaceholder.typicode.com/posts')
+  private URL = 'https://jsonplaceholder.typicode.com/posts';
+
+  constructor(private httpClient: HttpClient) {
+    httpClient.get(this.URL)
       .subscribe(response => {
         this.posts = response as any
       })
+  }
+
+  createPost(title: HTMLInputElement) {
+    let post: any = { title: title.value }
+    title.value = ''
+
+    this.httpClient.post(this.URL, JSON.stringify(post)).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
   }
 
 }
