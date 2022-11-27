@@ -5,9 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
-import { CoursesService } from './courses.service';
 import { AuthorsComponent } from './authors/authors.component';
-import { AuthorsService } from './authors.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
@@ -24,6 +22,9 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post-services/post.service';
+import { CoursesService } from './services/courses-services/courses.service';
+import { AuthorsService } from './services/authors-services/authors.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { PostsComponent } from './posts/posts.component';
   ],
   providers: [
     CoursesService,
-    AuthorsService
+    AuthorsService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
