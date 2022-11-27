@@ -42,7 +42,7 @@ export class PostsComponent {
   }
 
   deletePost(post: any) {
-    this.httpClient.delete(this.URL + '/' + post.id).subscribe(response => {
+    this.httpClient.delete(this.URL + '/' + post.id).subscribe(_ => {
       let index = this.posts.indexOf(post)
       this.posts.splice(index, 1)
     })
