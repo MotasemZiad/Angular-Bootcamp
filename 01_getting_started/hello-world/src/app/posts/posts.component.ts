@@ -31,4 +31,14 @@ export class PostsComponent {
     })
   }
 
+  updatePost(post: any) {
+    this.httpClient.patch(this.URL + '/' + post.id, JSON.stringify({
+      isRead: true
+    })).subscribe(response => {
+      console.log(response);
+    })
+
+    // this.httpClient.put(this.URL, JSON.stringify(post))
+  }
+
 }
