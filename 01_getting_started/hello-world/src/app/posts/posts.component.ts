@@ -41,4 +41,11 @@ export class PostsComponent {
     // this.httpClient.put(this.URL, JSON.stringify(post))
   }
 
+  deletePost(post: any) {
+    this.httpClient.delete(this.URL + '/' + post.id).subscribe(response => {
+      let index = this.posts.indexOf(post)
+      this.posts.splice(index, 1)
+    })
+  }
+
 }
