@@ -49,4 +49,6 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  // Separation of Concerns
+
 }
