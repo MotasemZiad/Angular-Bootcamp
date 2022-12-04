@@ -38,8 +38,6 @@ export class PostsComponent implements OnInit {
     this.service.updatePost(post).subscribe(response => {
       console.log(response);
     })
-
-    // this.httpClient.put(this.URL, JSON.stringify(post))
   }
 
   deletePost(post: any) {
@@ -48,7 +46,5 @@ export class PostsComponent implements OnInit {
       this.posts.splice(index, 1)
     })
   }
-
-  // Separation of Concerns
 
 }

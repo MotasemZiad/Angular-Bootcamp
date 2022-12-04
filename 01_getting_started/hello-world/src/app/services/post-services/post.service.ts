@@ -22,6 +22,8 @@ export class PostService {
     return this.http.patch(this.BASE_URL + this.posts + '/' + post.id, JSON.stringify({
       isRead: true
     }))
+
+    // this.http.put(this.URL, JSON.stringify(post))
   }
 
   deletePost(id: any) {
