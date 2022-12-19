@@ -48,7 +48,7 @@ export class PostsComponent implements OnInit {
   }
 
   /*
-    REST API Methods:
+    RESTful API Methods:
     1. GET
     2. POST
     3. PUT
@@ -60,4 +60,12 @@ export class PostsComponent implements OnInit {
     9. TRACE
   */
 
+  /*
+    RESTful API Status Codes:
+    1xx: Informational
+    2xx: Success
+    3xx: Redirection
+    4xx: Client error
+    5xx: Server error
+  */
 }
