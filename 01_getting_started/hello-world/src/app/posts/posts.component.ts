@@ -47,4 +47,17 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  /*
+    REST API Methods:
+    1. GET
+    2. POST
+    3. PUT
+    4. PATCH
+    5. DELETE
+    6. HEAD
+    7. OPTIONS
+    8. CONNECT
+    9. TRACE
+  */
+
 }
